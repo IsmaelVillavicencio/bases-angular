@@ -1,0 +1,14 @@
+<h1>DBZ Main Page</h1>
+<hr>
+
+<div class="row">
+	<div class="col">
+		<!-- [listCharacters]="characters", [listCharacters] es un atributo que tiene el componente hijo y characters es una propiedad del componente padre -->
+		<!-- (onDeleteCharacter)="onDeleteCharacter($event)", (onDeleteCharacter) es un evento que tiene el componente hijo y onDeleteCharacter es un método del componente padre -->
+		<dbz-list [listCharacters]="characters" (onDeleteCharacterById)="onDeleteCharacterById($event)"></dbz-list>
+	</div>
+	<div class="col">
+		<!-- (onNewCharacter)="onNewCharacter($event)", (onNewCharacter) es un evento que tiene el componente hijo y onNewCharacter es un método del componente padre -->
+		<dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+	</div>
+</div>
